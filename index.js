@@ -10,6 +10,8 @@ const reducer = (state = initialState, action) => {
       return { ...state, count: state.count + 1 };
     case "COUNT_DOWN":
       return { ...state, count: state.count - 1 };
+    case "RESET":
+      return { ...state, count: state.count - 1 };
     default:
       return;
   }
@@ -18,20 +20,9 @@ const reducer = (state = initialState, action) => {
 const store = redux.createStore(reducer);
 
 store.dispatch({ type: "COUNT_UP" });
-store.dispatch({ type: "COUNT_UP" });
-store.dispatch({ type: "COUNT_UP" });
-store.dispatch({ type: "COUNT_UP" });
-console.log("4回COUNT_UPしてみた結果: ", store.getState());
+console.log("1回COUNT_UPしてみた結果: ", store.getState());
 store.dispatch({ type: "COUNT_DOWN" });
 store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-store.dispatch({ type: "COUNT_DOWN" });
-console.log("12回COUNT_DOWNしてみた結果: ", store.getState());
+console.log("2回COUNT_DOWNしてみた結果: ", store.getState());
+store.dispatch({ type: "RESET" });
+console.log("RESETしてみた結果: ", store.getState());
