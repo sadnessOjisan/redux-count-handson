@@ -17,6 +17,9 @@ const reducer = (state = initialState, action) => {
   }
 };
 
+/**
+ * reducerからstoreを作れる
+ */
 const store = redux.createStore(reducer);
 
 store.dispatch({ type: "COUNT_UP" });

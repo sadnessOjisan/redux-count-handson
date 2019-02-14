@@ -1,0 +1,16 @@
+{
+  "source": "./",
+  "destination": "./.esdoc",
+  "includes": ["index.js"],
+  "excludes": ["node_modules"],
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "manual": {
+          "files": ["./.manual/usage.md"]
+        }
+      }
+    }
+  ]
+}

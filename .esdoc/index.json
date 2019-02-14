@@ -1,0 +1,26 @@
+[
+  {
+    "kind": "index",
+    "content": "# redux-count-handson\n\n## 概要\n\nredux でカウントアップ、カウンドダウンを行う。なお react との接続は行わない。\n\n機能: action に応じて、カウントを増減させる\n\n## 起動\n\n```\n$ npm install\n\n$ node index.js\n```\n\n## 解説\n\nreducer は, state と action を受け取り、action に応じて新しい state を返すだけの関数\n\nstore は, `createStore()`関数に reducer を入れてあげることで作られる\n\nstore.dispatch()の中に action オブジェクトを入れることで、reducer に action を通知することができる。(dispatch される度に reducer が動くイメージ)\n\n=> **つまり store を dispatch して action を reducer に伝えることで新しい state を作ることができる**\n",
+    "longname": "/Users/ojisan/Documents/200_work/240_Recruit/redux-count-handson/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": false,
+    "content": null,
+    "longname": "",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/Users/ojisan/Documents/200_work/240_Recruit/redux-count-handson/.manual/usage.md",
+    "name": "./.manual/usage.md",
+    "content": "# Usage\n\nhoge\n",
+    "static": true,
+    "access": "public"
+  }
+]
