@@ -1,7 +1,6 @@
 {
   "source": "./",
   "destination": "./.esdoc",
-  "includes": ["index.js"],
   "excludes": ["node_modules"],
   "plugins": [
     {
@@ -9,8 +8,15 @@
       "option": {
         "manual": {
           "files": ["./.manual/usage.md"]
+        },
+        "undocumentIdentifier": {
+          "enable": true
+        },
+        "unexportIdentifier": {
+          "enable": true
         }
       }
-    }
+    },
+    { "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true } }
   ]
 }

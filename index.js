@@ -1,10 +1,26 @@
 const redux = require("redux");
 
+/**
+ * @typedef {Object} Store
+ * @property {Number} count countの数値
+ */
+
+/**
+ * @typedef {Object} Action
+ * @property {String} type actionの識別子
+ * @property {mixed?} payload actionのデータ
+ */
+
 const initialState = {
   count: 0
 };
 
-const reducer = (state = initialState, action) => {
+/**
+ * reducer
+ * @param {Store} state
+ * @param {*} action
+ */
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "COUNT_UP":
       return { ...state, count: state.count + 1 };

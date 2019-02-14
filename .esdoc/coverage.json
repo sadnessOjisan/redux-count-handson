@@ -1,6 +1,14 @@
 {
-  "coverage": "0%",
-  "expectCount": 0,
-  "actualCount": 0,
-  "files": {}
+  "coverage": "66.66%",
+  "expectCount": 3,
+  "actualCount": 2,
+  "files": {
+    "redux-count-handson/index.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        1
+      ]
+    }
+  }
 }
