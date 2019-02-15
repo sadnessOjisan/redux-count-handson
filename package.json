@@ -4,7 +4,7 @@
   "description": "## 環境",
   "main": "index.js",
   "scripts": {
-    "esdoc": "esdoc -c '.esdoc.json'"
+    "docgen": "esdoc -c '.esdoc.json'"
   },
   "repository": {
     "type": "git",
