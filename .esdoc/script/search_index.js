@@ -1,63 +1,21 @@
 window.esdocSearchIndex = [
   [
+    "redux-count-handson/redux-count-handson/index.js~initialstate",
+    "variable/index.html#static-variable-initialState",
+    "<span>initialState</span> <span class=\"search-result-import-path\">redux-count-handson/redux-count-handson/index.js</span>",
+    "variable"
+  ],
+  [
     "redux-count-handson/redux-count-handson/index.js~reducer",
     "function/index.html#static-function-reducer",
     "<span>reducer</span> <span class=\"search-result-import-path\">redux-count-handson/redux-count-handson/index.js</span>",
     "function"
   ],
   [
-    "redux-count-handson/.esdoc/script/inherited-summary.js",
-    "file/redux-count-handson/.esdoc/script/inherited-summary.js.html",
-    "redux-count-handson/.esdoc/script/inherited-summary.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/inner-link.js",
-    "file/redux-count-handson/.esdoc/script/inner-link.js.html",
-    "redux-count-handson/.esdoc/script/inner-link.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/manual.js",
-    "file/redux-count-handson/.esdoc/script/manual.js.html",
-    "redux-count-handson/.esdoc/script/manual.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/patch-for-local.js",
-    "file/redux-count-handson/.esdoc/script/patch-for-local.js.html",
-    "redux-count-handson/.esdoc/script/patch-for-local.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/prettify/prettify.js",
-    "file/redux-count-handson/.esdoc/script/prettify/prettify.js.html",
-    "redux-count-handson/.esdoc/script/prettify/prettify.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/pretty-print.js",
-    "file/redux-count-handson/.esdoc/script/pretty-print.js.html",
-    "redux-count-handson/.esdoc/script/pretty-print.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/search.js",
-    "file/redux-count-handson/.esdoc/script/search.js.html",
-    "redux-count-handson/.esdoc/script/search.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/search_index.js",
-    "file/redux-count-handson/.esdoc/script/search_index.js.html",
-    "redux-count-handson/.esdoc/script/search_index.js",
-    "file"
-  ],
-  [
-    "redux-count-handson/.esdoc/script/test-summary.js",
-    "file/redux-count-handson/.esdoc/script/test-summary.js.html",
-    "redux-count-handson/.esdoc/script/test-summary.js",
-    "file"
+    "redux-count-handson/redux-count-handson/index.js~store",
+    "variable/index.html#static-variable-store",
+    "<span>store</span> <span class=\"search-result-import-path\">redux-count-handson/redux-count-handson/index.js</span>",
+    "variable"
   ],
   [
     "redux-count-handson/.external-ecmascript.js~array",

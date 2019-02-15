@@ -1,1 +1,48 @@
-[]
+[
+  {
+    "name": "reducer",
+    "filePath": "redux-count-handson/index.js",
+    "lines": [
+      {
+        "lineNumber": 29,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 30,
+        "line": " * reducerはstateを変更する役割を持ちます。古いstateとactionを元に、新しいstateを返します。"
+      },
+      {
+        "lineNumber": 31,
+        "line": " * stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。"
+      },
+      {
+        "lineNumber": 32,
+        "line": " * @param {Store} 更新前のstate"
+      },
+      {
+        "lineNumber": 33,
+        "line": " * @param {Action} 更新内容を伝えるメッセージ"
+      },
+      {
+        "lineNumber": 34,
+        "line": " * @return {Store} 新しいstate"
+      },
+      {
+        "lineNumber": 35,
+        "line": " */"
+      },
+      {
+        "lineNumber": 36,
+        "line": "export const reducer = (state = initialState, action) => {"
+      }
+    ],
+    "codeParams": [
+      "state",
+      "action"
+    ],
+    "docParams": [
+      "更新前のstate",
+      "更新内容を伝えるメッセージ"
+    ]
+  }
+]

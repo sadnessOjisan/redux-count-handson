@@ -30,6 +30,8 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-initialState">initialState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-store">store</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Action">Action</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Store">Store</a></span></span></li>
 </ul>
@@ -61,13 +63,74 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span><span class="code" data-ice="signature">(state: <span><a href="typedef/index.html#static-typedef-Store">Store</a></span>, action: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span><span class="code" data-ice="signature">(&#x66F4;&#x65B0;&#x524D;&#x306E;state: <span><a href="typedef/index.html#static-typedef-Store">Store</a></span>, &#x66F4;&#x65B0;&#x5185;&#x5BB9;&#x3092;&#x4F1D;&#x3048;&#x308B;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;: <span><a href="typedef/index.html#static-typedef-Action">Action</a></span>): <span><a href="typedef/index.html#static-typedef-Store">Store</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>reducer</p>
+        <div data-ice="description"><p>reducer&#x306F;state&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x5F79;&#x5272;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x3002;&#x53E4;&#x3044;state&#x3068;action&#x3092;&#x5143;&#x306B;&#x3001;&#x65B0;&#x3057;&#x3044;state&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;
+state&#x306E;&#x7834;&#x58CA;&#x7684;&#x5909;&#x66F4;&#x306F;&#x7981;&#x6B62;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x65B0;&#x3057;&#x3044;state&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x308A;&#x76F4;&#x3057;&#x3066;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          <span data-ice="kind-icon" class="kind-variable">V</span>
+          
+          
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-initialState">initialState</a></span></span><span class="code" data-ice="signature">: <span><a href="typedef/index.html#static-typedef-Store">Store</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>count&#x306E;state&#x3067;&#x3059;&#x3002;
+reducer&#x304B;&#x3089;&#x66F4;&#x65B0;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          <span data-ice="kind-icon" class="kind-variable">V</span>
+          
+          
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-store">store</a></span></span><span class="code" data-ice="signature">: <span><a href="typedef/index.html#static-typedef-Store">Store</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>redux&#x306E;store&#x3067;&#x3059;&#x3002;<code>createStore()</code>&#x306B;reducer&#x3092;&#x6E21;&#x3059;&#x3053;&#x3068;&#x3067;&#x751F;&#x6210;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
+store.dispatch(action)&#x3067;action&#x3092;dispatch&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 </div>
       </div>
     </td>
@@ -96,7 +159,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>redux&#x306E;action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -124,7 +188,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>redux&#x306E;store.</p>
+</div>
       </div>
     </td>
     <td>
