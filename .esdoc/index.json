@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "redux-count-handson/index.js",
-    "content": "/**\n * aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n */\n\nconst redux = require(\"redux\");\n\n/**\n * reduxのstore. アプリ全体のstateを管理する. このアプリケーションではcountをstateとして持つ.\n * @typedef {Object} Store\n * @property {Number} count countの数値\n */\n\n/**\n * reduxのaction.\n * @typedef {Object} Action\n * @property {String} type actionの識別子\n * @property {mixed?} payload actionのデータ\n * @example const exampleAction = {type: 'HOGE', payload: 'sample_data'}\n */\n\n/**\n * countのstateです。\n * reducerから更新されます。\n * @type {Store}\n */\nexport const initialState = {\n  count: 0\n};\n\n/**\n * reducerはstateを変更する役割を持ちます。古いstateとactionを元に、新しいstateを返します。\n * stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。\n * @param {Store} 更新前のstate\n * @param {Action} 更新内容を伝えるメッセージ\n * @return {Store} 新しいstate\n */\nexport const reducer = (state = initialState, action) => {\n  switch (action.type) {\n    case \"COUNT_UP\":\n      return { ...state, count: state.count + 1 }; // stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。\n    case \"COUNT_DOWN\":\n      return { ...state, count: state.count - 1 };\n    case \"RESET\":\n      return initialState;\n    default:\n      return;\n  }\n};\n\n/**\n * reduxのstoreです。`createStore()`にreducerを渡すことで生成できます。\n * store.dispatch(action)でactionをdispatchできます。\n * @type {Store}\n */\nexport const store = redux.createStore(reducer);\n\nstore.dispatch({ type: \"COUNT_UP\" }); // actionをdispatchする\nconsole.log(\"1回COUNT_UPしてみた結果: \", store.getState());\nstore.dispatch({ type: \"COUNT_DOWN\" });\nstore.dispatch({ type: \"COUNT_DOWN\" });\nconsole.log(\"2回COUNT_DOWNしてみた結果: \", store.getState());\nstore.dispatch({ type: \"RESET\" });\nconsole.log(\"RESETしてみた結果: \", store.getState());\n",
+    "content": "const redux = require(\"redux\");\n\n/**\n * reduxのstore. アプリ全体のstateを管理する. このアプリケーションではcountをstateとして持つ.\n * @typedef {Object} Store\n * @property {Number} count countの数値\n */\n\n/**\n * reduxのaction.\n * @typedef {Object} Action\n * @property {String} type actionの識別子\n * @property {mixed?} payload actionのデータ\n * @example const exampleAction = {type: 'HOGE', payload: 'sample_data'}\n */\n\n/**\n * countのstateです。\n * reducerから更新されます。\n * @type {Store}\n */\nconst initialState = {\n  count: 0\n};\n\n/**\n * reducerはstateを変更する役割を持ちます。古いstateとactionを元に、新しいstateを返します。\n * stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。\n * @param {Store} state 更新前のstate\n * @param {Action} action 更新内容を伝えるメッセージ\n * @return {Store} 新しいstate\n */\nconst reducer = (state = initialState, action) => {\n  switch (action.type) {\n    case \"COUNT_UP\":\n      return { ...state, count: state.count + 1 }; // stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。\n    case \"COUNT_DOWN\":\n      return { ...state, count: state.count - 1 };\n    case \"RESET\":\n      return initialState;\n    default:\n      return;\n  }\n};\n\n/**\n * reduxのstoreです。`createStore()`にreducerを渡すことで生成できます。\n * store.dispatch(action)でactionをdispatchできます。\n * @type {Store}\n */\nconst store = redux.createStore(reducer);\n\nstore.dispatch({ type: \"COUNT_UP\" }); // actionをdispatchする\nconsole.log(\"1回COUNT_UPしてみた結果: \", store.getState());\nstore.dispatch({ type: \"COUNT_DOWN\" });\nstore.dispatch({ type: \"COUNT_DOWN\" });\nconsole.log(\"2回COUNT_DOWNしてみた結果: \", store.getState());\nstore.dispatch({ type: \"RESET\" });\nconsole.log(\"RESETしてみた結果: \", store.getState());\n\n// esdocで仕様書を生成するためにexport. アプリを動かすためならば、この処理は不要\nexport { store, reducer, initialState };\n",
     "static": true,
     "longname": "/Users/ojisan/Documents/200_work/240_Recruit/redux-count-handson/index.js",
     "access": "public",
@@ -585,8 +585,9 @@
     "export": false,
     "importPath": "redux-count-handson/redux-count-handson/index.js",
     "importStyle": null,
-    "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "lineNumber": 5,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
     "type": {
       "types": [
         "*"
@@ -596,6 +597,74 @@
   },
   {
     "__docId__": 50,
+    "kind": "variable",
+    "name": "store",
+    "memberof": "redux-count-handson/index.js",
+    "static": true,
+    "longname": "redux-count-handson/index.js~store",
+    "access": "public",
+    "export": true,
+    "importPath": "redux-count-handson/redux-count-handson/index.js",
+    "importStyle": "{store}",
+    "description": "reduxのstoreです。`createStore()`にreducerを渡すことで生成できます。\nstore.dispatch(action)でactionをdispatchできます。",
+    "lineNumber": 51,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Store"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "reducer",
+    "memberof": "redux-count-handson/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "redux-count-handson/index.js~reducer",
+    "access": "public",
+    "export": true,
+    "importPath": "redux-count-handson/redux-count-handson/index.js",
+    "importStyle": "{reducer}",
+    "description": "reducerはstateを変更する役割を持ちます。古いstateとactionを元に、新しいstateを返します。\nstateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。",
+    "lineNumber": 33,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Store"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "state",
+        "description": "更新前のstate"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Action"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "action",
+        "description": "更新内容を伝えるメッセージ"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Store"
+      ],
+      "spread": false,
+      "description": "新しいstate"
+    }
+  },
+  {
+    "__docId__": 52,
     "kind": "typedef",
     "name": "Store",
     "memberof": "redux-count-handson/index.js",
@@ -624,7 +693,7 @@
     }
   },
   {
-    "__docId__": 51,
+    "__docId__": 53,
     "kind": "typedef",
     "name": "Action",
     "memberof": "redux-count-handson/index.js",
@@ -666,7 +735,7 @@
     }
   },
   {
-    "__docId__": 52,
+    "__docId__": 54,
     "kind": "variable",
     "name": "initialState",
     "memberof": "redux-count-handson/index.js",
@@ -677,75 +746,7 @@
     "importPath": "redux-count-handson/redux-count-handson/index.js",
     "importStyle": "{initialState}",
     "description": "countのstateです。\nreducerから更新されます。",
-    "lineNumber": 26,
-    "type": {
-      "nullable": null,
-      "types": [
-        "Store"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 53,
-    "kind": "function",
-    "name": "reducer",
-    "memberof": "redux-count-handson/index.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "redux-count-handson/index.js~reducer",
-    "access": "public",
-    "export": true,
-    "importPath": "redux-count-handson/redux-count-handson/index.js",
-    "importStyle": "{reducer}",
-    "description": "reducerはstateを変更する役割を持ちます。古いstateとactionを元に、新しいstateを返します。\nstateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。",
-    "lineNumber": 37,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "Store"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "更新前のstate",
-        "description": ""
-      },
-      {
-        "nullable": null,
-        "types": [
-          "Action"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "更新内容を伝えるメッセージ",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Store"
-      ],
-      "spread": false,
-      "description": "新しいstate"
-    }
-  },
-  {
-    "__docId__": 54,
-    "kind": "variable",
-    "name": "store",
-    "memberof": "redux-count-handson/index.js",
-    "static": true,
-    "longname": "redux-count-handson/index.js~store",
-    "access": "public",
-    "export": true,
-    "importPath": "redux-count-handson/redux-count-handson/index.js",
-    "importStyle": "{store}",
-    "description": "reduxのstoreです。`createStore()`にreducerを渡すことで生成できます。\nstore.dispatch(action)でactionをdispatchできます。",
-    "lineNumber": 55,
+    "lineNumber": 22,
     "type": {
       "nullable": null,
       "types": [

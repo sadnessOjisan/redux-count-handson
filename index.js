@@ -1,7 +1,3 @@
-/**
- * aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
- */
-
 const redux = require("redux");
 
 /**
@@ -23,18 +19,18 @@ const redux = require("redux");
  * reducerから更新されます。
  * @type {Store}
  */
-export const initialState = {
+const initialState = {
   count: 0
 };
 
 /**
  * reducerはstateを変更する役割を持ちます。古いstateとactionを元に、新しいstateを返します。
  * stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。
- * @param {Store} 更新前のstate
- * @param {Action} 更新内容を伝えるメッセージ
+ * @param {Store} state 更新前のstate
+ * @param {Action} action 更新内容を伝えるメッセージ
  * @return {Store} 新しいstate
  */
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "COUNT_UP":
       return { ...state, count: state.count + 1 }; // stateの破壊的変更は禁止されているので、新しいstateオブジェクトを作り直して返しています。
@@ -52,7 +48,7 @@ export const reducer = (state = initialState, action) => {
  * store.dispatch(action)でactionをdispatchできます。
  * @type {Store}
  */
-export const store = redux.createStore(reducer);
+const store = redux.createStore(reducer);
 
 store.dispatch({ type: "COUNT_UP" }); // actionをdispatchする
 console.log("1回COUNT_UPしてみた結果: ", store.getState());
@@ -61,3 +57,6 @@ store.dispatch({ type: "COUNT_DOWN" });
 console.log("2回COUNT_DOWNしてみた結果: ", store.getState());
 store.dispatch({ type: "RESET" });
 console.log("RESETしてみた結果: ", store.getState());
+
+// esdocで仕様書を生成するためにexport. アプリを動かすためならば、この処理は不要
+export { store, reducer, initialState };
