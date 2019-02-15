@@ -18,6 +18,12 @@ $ npm install
 $ node index.js
 ```
 
+ローカルでドキュメントを読みたい
+
+```
+$ npm run docgen
+```
+
 ## 解説
 
 reducer は, state と action を受け取り、action に応じて新しい state を返すだけの関数
